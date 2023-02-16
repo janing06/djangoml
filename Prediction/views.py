@@ -6,8 +6,7 @@ def index(request):
 
 def result(request):
 
-
-    model = joblib.load('FinalModel2')
+    model = joblib.load('BreastCancerModel')
 
     lis = []
 
@@ -25,9 +24,8 @@ def result(request):
     
     result = model.predict([lis])
     print(result)
-    if result ==[1]:
+    if result == [1]:
         result2 = "MALIGNANT"
-        
     else:
         result2 = "BENIGN"
 
